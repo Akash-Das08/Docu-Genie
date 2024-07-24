@@ -44,7 +44,6 @@ export async function DELETE(
     if (!userId) {
       return new NextResponse("User Not Authenticated", { status: 401 });
     }
-
     const deleteDocument = await db.document.delete({
       where: {
         id: params.documentId,
